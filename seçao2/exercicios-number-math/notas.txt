@@ -1,0 +1,7 @@
+tirar casas decimais = tofixed();
+
+checar se o número é inteiro = isInteger();
+
+arredondar para baixo = Math.floor();
+
+arredondar para cima = Math.ceil();
