@@ -1,0 +1,1 @@
+.preventDefault() == evita que a pagina atualize;
