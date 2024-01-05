@@ -2,3 +2,5 @@ Objeto Date
 
 for
 while
+
+try, catch e throw
