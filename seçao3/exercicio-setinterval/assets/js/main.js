@@ -1,18 +1,43 @@
-// const clock = document.querySelector('.clock');
-// const start = document.querySelector('.start');
-// const stop = document.querySelector('.stop');
-// const reset = document.querySelector('.reset');
-
-// const hour = document.querySelector('#hour');
-// const min = document.querySelector('#min');
-// const sec = document.querySelector('#sec');
-
-function time() {
-    for (let sec = 0; sec < 3; sec++)
+function clock(){
+    function getHourForSeconds(seconds) {
+        const date = new Date (seconds * 1000);
+        return date.toLocaleTimeString('pt-BR', {
+            hour12: false,
+            timeZone: 'UTC'
+        });
+    }
     
-    return sec
-};
-
-setInterval(function(){
-    console.log(time());
-}, 1000);
+    const clock = document.querySelector('.clock');
+    let seconds = 0;
+    let timer;
+    
+    function startClock(){
+        timer = setInterval(function(){
+        seconds++
+        clock.innerHTML = getHourForSeconds(seconds);
+        }, 1000);
+    }
+    
+    document.addEventListener('click', function(e){
+        const el = e.target;
+    
+        if(el.classList.contains('start')){
+            clearInterval(timer);
+            startClock();
+            clock.style.color = 'black';
+        }
+    
+        if(el.classList.contains('stop')){
+            clearInterval(timer);
+            clock.style.color = 'red';
+        }
+    
+        if(el.classList.contains('reset')){
+            clearInterval(timer);
+            clock.innerHTML = '00:00:00';
+            seconds = 0;
+            clock.style.color = 'black';
+        }
+    });
+}
+clock();
