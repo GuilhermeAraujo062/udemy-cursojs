@@ -4,3 +4,5 @@ for
 while
 
 try, catch e throw
+
+callback
