@@ -6,3 +6,7 @@ while
 try, catch e throw
 
 callback
+
+IIFE
+
+this
