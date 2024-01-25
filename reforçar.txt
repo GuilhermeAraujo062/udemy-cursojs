@@ -10,3 +10,5 @@ callback
 IIFE
 
 this
+
+filter, map, reduce

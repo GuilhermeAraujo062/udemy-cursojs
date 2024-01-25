@@ -7,8 +7,11 @@ const pessoas = [
     {nome : 'Wallace', idade: 47}
 ];
 
-const pessoasNome = pessoas.filter(obj => obj.nome.length >= 5);
+const nomes = pessoas.map(obj => obj.nome);
+const idades = pessoas.map(obj => obj.idade);
 
-const pessoasIdade = pessoas.filter(obj => obj.idade > 50);
-
-const pessoasTerminaComA = pessoas.filter(obj => obj.nome.toLowerCase().endsWith('a'));
+const ComIds = pessoas.map(function(obj, indice){
+    const newObj = {...obj};
+    newObj.id = indice;
+    return newObj;
+});
