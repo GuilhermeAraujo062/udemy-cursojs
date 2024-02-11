@@ -12,3 +12,5 @@ IIFE
 this
 
 filter, map, reduce
+
+~ Prototype ~
