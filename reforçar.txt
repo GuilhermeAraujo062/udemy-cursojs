@@ -14,3 +14,5 @@ this
 filter, map, reduce
 
 ~ Prototype ~
+
+class
