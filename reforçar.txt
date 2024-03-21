@@ -18,3 +18,5 @@ filter, map, reduce
 class
 
 promises
+
+fetch api
