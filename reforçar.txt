@@ -19,4 +19,4 @@ class
 
 promises
 
-fetch api
+fetch api / json
